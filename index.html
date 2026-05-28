@@ -2,41 +2,87 @@
 <html lang="cs">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#07111f">
 
   <title>Energomotive s.r.o.</title>
 
-  <!-- FONT -->
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="obrazek.png">
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:title" content="Energomotive s.r.o.">
+  <meta property="og:description"
+  content="Profesionální řešení pro energetickou infrastrukturu.">
+
+  <meta property="og:image" content="obrazek.png">
+
+  <meta property="og:type" content="website">
+
+  <!-- GOOGLE FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
   <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+
+window.onload = () => {
+
+  window.scrollTo({
+    top: 0,
+    behavior: "instant"
+  });
+
+};
+
+</script>
+
 <body>
 
+  <!-- ========================================= -->
   <!-- NAVBAR -->
+  <!-- ========================================= -->
+
   <nav class="navbar">
+
     <div class="logo">
       <span class="logo-orange">ENERGO</span><span class="logo-blue">MOTIVE</span>
     </div>
 
     <div class="nav-links">
+
       <a href="#o-nas">O nás</a>
       <a href="#sluzby">Služby</a>
       <a href="#realizace">Realizace</a>
       <a href="#kontakt">Kontakt</a>
+
     </div>
+
+    <div class="hamburger" onclick="toggleMenu()">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
   </nav>
 
+  <!-- ========================================= -->
   <!-- HERO -->
+  <!-- ========================================= -->
+
   <header class="hero">
 
-    <!-- TADY SI DOSADÍŠ OBRÁZEK -->
     <div class="hero-overlay">
 
-      <div class="hero-content">
-        <p class="hero-subtitle">VN • NN • REVIZE • ENERGETIKA</p>
+      <div class="hero-content hidden">
+
+        <p class="hero-subtitle">
+          VN • NN • REVIZE • ENERGETIKA
+        </p>
 
         <h1>
           Profesionální řešení
@@ -44,11 +90,14 @@
         </h1>
 
         <p class="hero-text">
+
           Specializujeme se na montáže vysokého a nízkého napětí,
           revize elektrických zařízení a průmyslové energetické projekty.
+
         </p>
 
         <div class="hero-buttons">
+
           <a href="#kontakt" class="btn-primary">
             Kontaktovat
           </a>
@@ -56,14 +105,20 @@
           <a href="#realizace" class="btn-secondary">
             Naše realizace
           </a>
+
         </div>
+
       </div>
 
     </div>
+
   </header>
 
+  <!-- ========================================= -->
   <!-- O NÁS -->
-  <section id="o-nas" class="section about">
+  <!-- ========================================= -->
+
+  <section id="o-nas" class="section about hidden">
 
     <div class="section-title">
       <p>KDO JSME</p>
@@ -73,15 +128,23 @@
     <div class="about-grid">
 
       <div class="about-text">
+
         <p>
+
           Společnost Energomotive s.r.o. poskytuje komplexní služby
-          v oblasti vysokého a nízkého napětí, revizí a průmyslových elektroinstalací.
+          v oblasti vysokého a nízkého napětí, revizí
+          a průmyslových elektroinstalací.
+
         </p>
 
         <p>
-          Zaměřujeme se na kvalitní realizace, bezpečnost,
-          technickou preciznost a dlouhodobou spolupráci.
+
+          Zaměřujeme se na kvalitní realizace,
+          technickou preciznost, bezpečnost
+          a dlouhodobou spolupráci.
+
         </p>
+
       </div>
 
       <div class="stats-grid">
@@ -112,8 +175,11 @@
 
   </section>
 
+  <!-- ========================================= -->
   <!-- SLUŽBY -->
-  <section id="sluzby" class="section dark-section">
+  <!-- ========================================= -->
+
+  <section id="sluzby" class="section dark-section hidden">
 
     <div class="section-title center">
       <p>NAŠE SLUŽBY</p>
@@ -123,47 +189,82 @@
     <div class="services-grid">
 
       <div class="service-card">
-        <div class="service-icon">⚡</div>
+
+        <div class="service-icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+
         <h3>VN montáže</h3>
+
         <p>
+
           Realizace vysokonapěťových rozvodů,
           rozvoden a energetických celků.
+
         </p>
+
       </div>
 
       <div class="service-card">
-        <div class="service-icon">🔌</div>
+
+        <div class="service-icon">
+          <i class="fa-solid fa-plug"></i>
+        </div>
+
         <h3>NN instalace</h3>
+
         <p>
+
           Profesionální montáže nízkého napětí
           pro průmysl i komerční objekty.
+
         </p>
+
       </div>
 
       <div class="service-card">
-        <div class="service-icon">📋</div>
+
+        <div class="service-icon">
+          <i class="fa-solid fa-clipboard-check"></i>
+        </div>
+
         <h3>Revize zařízení</h3>
+
         <p>
-          Revize elektrických zařízení bez omezení napětí
-          dle aktuálních norem.
+
+          Revize elektrických zařízení
+          bez omezení napětí dle aktuálních norem.
+
         </p>
+
       </div>
 
       <div class="service-card">
-        <div class="service-icon">🏭</div>
+
+        <div class="service-icon">
+          <i class="fa-solid fa-industry"></i>
+        </div>
+
         <h3>Průmyslové projekty</h3>
+
         <p>
+
           Komplexní řešení elektroinstalací
           pro výrobní a průmyslové provozy.
+
         </p>
+
       </div>
 
     </div>
 
   </section>
 
+  <!-- ========================================= -->
   <!-- REALIZACE -->
-  <section id="realizace" class="section">
+  <!-- ========================================= -->
+
+  <section id="realizace" class="section hidden">
 
     <div class="section-title center">
       <p>REFERENCE</p>
@@ -173,38 +274,53 @@
     <div class="projects-grid">
 
       <div class="project-card">
-        <div class="project-image"></div>
+
+        <div class="project-image project1"></div>
 
         <div class="project-content">
+
           <h3>Rekonstrukce VN rozvaděče</h3>
           <p>Průmyslový areál • Plzeňský kraj</p>
+
         </div>
+
       </div>
 
       <div class="project-card">
-        <div class="project-image"></div>
+
+        <div class="project-image project2"></div>
 
         <div class="project-content">
+
           <h3>NN rozvody výrobní haly</h3>
           <p>Výrobní provoz • Česká republika</p>
+
         </div>
+
       </div>
 
       <div class="project-card">
-        <div class="project-image"></div>
+
+        <div class="project-image project3"></div>
 
         <div class="project-content">
+
           <h3>Revize průmyslového objektu</h3>
           <p>Energetický audit a revize zařízení</p>
+
         </div>
+
       </div>
 
     </div>
 
   </section>
 
+  <!-- ========================================= -->
   <!-- PROČ MY -->
-  <section class="section dark-section">
+  <!-- ========================================= -->
+
+  <section class="section dark-section hidden">
 
     <div class="section-title center">
       <p>PROČ ENERGOMOTIVE</p>
@@ -214,97 +330,178 @@
     <div class="advantages-grid">
 
       <div class="advantage-card">
+
         <h3>Technická odbornost</h3>
+
         <p>
+
           Zkušenosti s průmyslovými
           a energetickými projekty.
+
         </p>
+
       </div>
 
       <div class="advantage-card">
+
         <h3>Dodržování termínů</h3>
+
         <p>
+
           Projekty realizujeme efektivně
           a v domluvených termínech.
+
         </p>
+
       </div>
 
       <div class="advantage-card">
+
         <h3>Důraz na bezpečnost</h3>
+
         <p>
+
           Pracujeme dle aktuálních norem
           a bezpečnostních standardů.
+
         </p>
+
       </div>
 
     </div>
 
   </section>
 
+  <!-- ========================================= -->
   <!-- KONTAKT -->
-  <section id="kontakt" class="section contact-section">
+  <!-- ========================================= -->
+
+  <section id="kontakt" class="section contact-section hidden">
 
     <div class="contact-wrapper">
 
       <div class="contact-info">
 
         <div class="section-title">
+
           <p>KONTAKT</p>
           <h2>Kontaktujte nás</h2>
+
         </div>
 
         <p class="contact-text">
+
           Hledáte spolehlivého partnera
           pro elektro a energetické projekty?
           Ozvěte se nám.
+
         </p>
 
         <div class="contact-item">
-          <strong>Energomotive s.r.o.</strong>
+          <i class="fa-solid fa-building"></i>
+          Energomotive s.r.o.
         </div>
 
         <div class="contact-item">
+          <i class="fa-solid fa-user"></i>
           Martin Eret, jednatel společnosti
         </div>
 
         <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
           Nezvěstice 232, 332 04 Nezvěstice
         </div>
 
         <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
           +420 724 459 967
         </div>
 
         <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
           eret@energomotive.cz
         </div>
 
       </div>
 
-      <!-- FORM -->
+      <!-- ========================================= --> 
+      <!-- FORM --> 
+      <!-- ========================================= -->
+
       <div class="contact-form">
 
-        <form>
+      <form
+        action="https://formsubmit.co/eret@energomotive.cz"
+        method="POST"
+      >
 
-          <input type="text" placeholder="Vaše jméno" required>
+        <!-- SUBJECT EMAILU -->
+        <input
+          type="hidden"
+          name="_subject"
+          value="Nová zpráva z webu Energomotive"
+        >
 
-          <input type="email" placeholder="E-mail" required>
+        <!-- FORMÁT EMAILU -->
+        <input
+          type="hidden"
+          name="_template"
+          value="table"
+        >
 
-          <textarea rows="6" placeholder="Vaše zpráva"></textarea>
+        <!-- AUTO ODPOVĚĎ -->
+        <input
+          type="hidden"
+          name="_autoresponse"
+          value="Děkujeme za zprávu. Ozveme se vám co nejdříve."
+        >
 
-          <button type="submit">
-            Odeslat zprávu
-          </button>
+        <!-- REDIRECT -->
+        <input
+          type="hidden"
+          name="_next"
+          value="https://energomotive.cz"
+        >
+
+        <input
+          type="text"
+          name="jmeno"
+          placeholder="Vaše jméno"
+          required
+        >
+
+        <input
+          type="email"
+          name="email"
+          placeholder="E-mail"
+          required
+        >
+
+        <textarea
+          name="zprava"
+          rows="6"
+          placeholder="Vaše zpráva"
+          required
+        ></textarea>
+
+        <button type="submit">
+          Odeslat zprávu
+        </button>
 
         </form>
 
       </div>
 
+      
+
     </div>
 
   </section>
 
+  <!-- ========================================= -->
   <!-- FOOTER -->
+  <!-- ========================================= -->
+
   <footer>
 
     <div class="footer-logo">
@@ -317,6 +514,38 @@
     </p>
 
   </footer>
+
+  <!-- ========================================= -->
+  <!-- SCRIPTS -->
+  <!-- ========================================= -->
+
+  <script>
+
+    function toggleMenu(){
+
+      document
+        .querySelector(".nav-links")
+        .classList.toggle("active");
+
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+
+      entries.forEach((entry) => {
+
+        if(entry.isIntersecting){
+          entry.target.classList.add("show");
+        }
+
+      });
+
+    });
+
+    const hiddenElements = document.querySelectorAll(".hidden");
+
+    hiddenElements.forEach((el) => observer.observe(el));
+
+  </script>
 
 </body>
 </html>
