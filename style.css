@@ -660,7 +660,7 @@ footer{
 
   transform:translateY(60px);
 
-  transition:all 1s ease;
+  transition:all 0.8s ease;
 }
 
 .show{
@@ -738,7 +738,10 @@ footer{
     top:0;
     right:-100%;
 
-    width:70%;
+    
+
+    width:320px;
+    max-width:80%;
     height:100vh;
 
     background:#07111f;
@@ -798,3 +801,289 @@ footer{
   }
 
 }
+
+/* ========================================= */
+/* PROJECT IMAGE ZOOM */
+/* ========================================= */
+
+.project-card{
+  position:relative;
+}
+
+.project-image{
+
+  position:relative;
+
+  overflow:hidden;
+
+  transition:
+    transform 0.6s ease;
+
+}
+
+.project-image::after{
+
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.45),
+      rgba(0,0,0,0.05)
+    );
+
+}
+
+.project-card:hover .project-image{
+
+  transform:scale(1.08);
+
+}
+
+/* ========================================= */
+/* PROJECT CONTENT PREMIUM */
+/* ========================================= */
+
+.project-content{
+
+  position:relative;
+  z-index:2;
+
+  background:white;
+}
+
+/* ========================================= */
+/* PREMIUM NAVBAR SCROLL */
+/* ========================================= */
+
+.navbar.scrolled{
+
+  padding:16px 8%;
+
+  background:rgba(5,15,30,0.94);
+
+  backdrop-filter:blur(18px);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.25);
+
+}
+
+/* ========================================= */
+/* CLICKABLE ELEMENTS */
+/* ========================================= */
+
+button,
+a,
+.project-card,
+.service-card,
+.stat-card,
+.advantage-card{
+  cursor:pointer;
+}
+
+/* ========================================= */
+/* CTA SECTION */
+/* ========================================= */
+
+.cta-section{
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #07111f,
+      #0B1F33
+    );
+
+  padding:140px 8%;
+
+  text-align:center;
+
+  color:white;
+}
+
+.cta-section::before{
+
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(244,123,32,0.14),
+      transparent 35%
+    );
+}
+
+.cta-content{
+
+  position:relative;
+  z-index:2;
+
+  max-width:900px;
+
+  margin:auto;
+}
+
+.cta-content h2{
+
+  font-size:3.5rem;
+
+  line-height:1.1;
+
+  margin-bottom:30px;
+}
+
+.cta-content p{
+
+  color:#d1d5db;
+
+  font-size:1.15rem;
+
+  margin-bottom:40px;
+}
+
+/* ========================================= */
+/* LOADING SCREEN */
+/* ========================================= */
+
+
+.loader{
+
+  position:fixed;
+  inset:0;
+
+  background:#07111f;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  z-index:99999;
+
+  opacity:1;
+  visibility:visible;
+
+  transition:
+    opacity 0.6s ease,
+    visibility 0.6s ease;
+
+}
+
+.loader.fade-out{
+
+  opacity:0;
+  visibility:hidden;
+
+}
+
+.loader-logo{
+
+  font-size:2rem;
+
+  font-weight:800;
+
+  color:white;
+
+  letter-spacing:3px;
+
+  animation:pulse 1.2s infinite;
+}
+
+.loader-logo span{
+  color:#F47B20;
+}
+
+@keyframes pulse{
+
+  0%{
+    opacity:0.5;
+    transform:scale(0.98);
+  }
+
+  50%{
+    opacity:1;
+    transform:scale(1);
+  }
+
+  100%{
+    opacity:0.5;
+    transform:scale(0.98);
+  }
+
+}
+
+/* ========================================= */
+/* MOBILE MENU OVERLAY */
+/* ========================================= */
+
+.mobile-overlay{
+
+  position:fixed;
+  inset:0;
+
+  background:rgba(0,0,0,0.55);
+
+  z-index:998;
+
+  opacity:0;
+  visibility:hidden;
+
+  transition:0.3s;
+}
+
+.mobile-overlay.active{
+
+  opacity:1;
+  visibility:visible;
+}
+
+/* ========================================= */
+/* CLOSE BUTTON */
+/* ========================================= */
+
+.close-menu{
+
+  position:absolute;
+
+  top:30px;
+  right:30px;
+
+  color:white;
+
+  font-size:2rem;
+
+  cursor:pointer;
+
+  display:none;
+}
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media(max-width:768px){
+
+  .close-menu{
+    display:block;
+  }
+
+  .cta-content h2{
+    font-size:2.4rem;
+  }
+
+}
+
+
+
+
+
