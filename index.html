@@ -28,22 +28,33 @@
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
   <link rel="stylesheet" href="style.css">
+
+  
+  <link rel="preload" as="image" href="obrazek.png">
+
+
 </head>
 
-<script>
 
-window.onload = () => {
-
-  window.scrollTo({
-    top: 0,
-    behavior: "instant"
-  });
-
-};
-
-</script>
 
 <body>
+
+
+    <!-- ========================================= -->
+    <!-- LOADER -->
+    <!-- ========================================= -->
+
+    <div class="loader" id="loader">
+
+      <div class="loader-logo">
+        <span>ENERGO</span>MOTIVE
+      </div>
+
+    </div>
+
+<!-- MOBILE OVERLAY -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
 
   <!-- ========================================= -->
   <!-- NAVBAR -->
@@ -57,11 +68,15 @@ window.onload = () => {
 
     <div class="nav-links">
 
+      <div class="close-menu" onclick="toggleMenu()">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+
       <a href="#o-nas">O nás</a>
       <a href="#sluzby">Služby</a>
       <a href="#realizace">Realizace</a>
       <a href="#kontakt">Kontakt</a>
-
+      
     </div>
 
     <div class="hamburger" onclick="toggleMenu()">
@@ -78,7 +93,7 @@ window.onload = () => {
 
     <div class="hero-overlay">
 
-      <div class="hero-content hidden">
+      <div class="hero-content">
 
         <p class="hero-subtitle">
           VN • NN • REVIZE • ENERGETIKA
@@ -372,6 +387,37 @@ window.onload = () => {
 
   </section>
 
+    <!-- ========================================= -->
+    <!-- CTA SECTION -->
+    <!-- ========================================= -->
+
+    <section class="cta-section hidden">
+
+      <div class="cta-content">
+
+        <h2>
+          Hledáte spolehlivého partnera
+          pro energetické projekty?
+        </h2>
+
+        <p>
+
+          Kontaktujte nás a zjistěte,
+          jak vám můžeme pomoci
+          s realizací energetických projektů.
+
+        </p>
+
+        <a href="#kontakt" class="btn-primary">
+          Nezávazně poptat
+        </a>
+
+      </div>
+
+    </section>
+
+
+
   <!-- ========================================= -->
   <!-- KONTAKT -->
   <!-- ========================================= -->
@@ -519,33 +565,123 @@ window.onload = () => {
   <!-- SCRIPTS -->
   <!-- ========================================= -->
 
-  <script>
 
-    function toggleMenu(){
+    
+<script>
 
-      document
-        .querySelector(".nav-links")
-        .classList.toggle("active");
+
+
+window.onload = () => {
+
+  window.scrollTo({
+    top:0,
+    behavior:"instant"
+  });
+
+  setTimeout(() => {
+
+    document
+      .getElementById("loader")
+      .classList.add("fade-out");
+
+  }, 500);
+
+};
+
+
+
+
+/* ========================================= */
+/* MOBILE MENU */
+/* ========================================= */
+
+function toggleMenu(){
+
+  document
+    .querySelector(".nav-links")
+    .classList.toggle("active");
+
+  document
+    .getElementById("mobileOverlay")
+    .classList.toggle("active");
+
+}
+
+/* ========================================= */
+/* SCROLL REVEAL */
+/* ========================================= */
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach((entry) => {
+
+    if(entry.isIntersecting){
+
+      entry.target.classList.add("show");
 
     }
 
-    const observer = new IntersectionObserver((entries) => {
+  });
 
-      entries.forEach((entry) => {
+});
 
-        if(entry.isIntersecting){
-          entry.target.classList.add("show");
-        }
+const hiddenElements =
+  document.querySelectorAll(".hidden");
 
-      });
+hiddenElements.forEach((el) =>
+  observer.observe(el)
+);
+
+/* ========================================= */
+/* NAVBAR SCROLL EFFECT */
+/* ========================================= */
+
+window.addEventListener("scroll", () => {
+
+  const navbar =
+    document.querySelector(".navbar");
+
+  if(window.scrollY > 50){
+
+    navbar.classList.add("scrolled");
+
+  }else{
+
+    navbar.classList.remove("scrolled");
+
+  }
+
+});
+
+
+
+
+
+document
+  .getElementById("mobileOverlay")
+  .addEventListener("click", toggleMenu);
+
+  
+document
+  .querySelectorAll(".nav-links a")
+  .forEach(link => {
+
+    link.addEventListener("click", () => {
+
+      document
+        .querySelector(".nav-links")
+        .classList.remove("active");
+
+      document
+        .getElementById("mobileOverlay")
+        .classList.remove("active");
 
     });
 
-    const hiddenElements = document.querySelectorAll(".hidden");
+});
 
-    hiddenElements.forEach((el) => observer.observe(el));
 
-  </script>
+</script>
 
 </body>
 </html>
