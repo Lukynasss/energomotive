@@ -471,15 +471,15 @@ body{
 }
 
 .project1{
-  background-image:url("project1.jpg");
+  background-image:url("rozvodna.jpg");
 }
 
 .project2{
-  background-image:url("project2.jpg");
+  background-image:url("nn\ rozvadec.jpg");
 }
 
 .project3{
-  background-image:url("project3.jpg");
+  background-image:url("udrba.jpg");
 }
 
 .project-content{
@@ -1083,7 +1083,164 @@ a,
 
 }
 
+.nav-contact{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
 
+.nav-contact a{
+  color:white;
+  text-decoration:none;
+  font-size:0.95rem;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.nav-contact a:hover{
+  color:#F47B20;
+}
+
+.nav-contact i{
+  margin-right:6px;
+  color:#F47B20;
+}
+
+@media(max-width:1200px){
+
+  .nav-contact{
+    display:none;
+  }
+
+}
+
+.stat-card{
+
+  position:relative;
+
+  background:white;
+
+  padding:40px;
+
+  border-radius:18px;
+
+  overflow:hidden;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.06);
+
+  border-top:4px solid #F47B20;
+
+  transition:0.3s;
+}
+
+
+
+.stat-icon{
+
+  position:absolute;
+
+  top:50%;
+  right:50px;
+
+  transform:translateY(-50%);
+
+  font-size:5rem;
+
+  color:#0B1F33;
+
+  opacity:0.4;
+
+  pointer-events:none;
+}
+
+/* ========================================= */
+/* PROCESS */
+/* ========================================= */
+
+.process-section{
+
+  background:white;
+}
+
+.process-line{
+
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+
+  gap:30px;
+
+  position:relative;
+
+  margin-top:60px;
+}
+
+.process-line::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:30px;
+  left:10%;
+
+  width:80%;
+  height:3px;
+
+  background:#dbe2ea;
+
+  z-index:1;
+}
+
+.process-step{
+
+  flex:1;
+
+  text-align:center;
+
+  position:relative;
+
+  z-index:2;
+}
+
+.process-number{
+
+  width:60px;
+  height:60px;
+
+  margin:0 auto 25px;
+
+  border-radius:50%;
+
+  background:#F47B20;
+
+  color:white;
+
+  font-size:1.4rem;
+  font-weight:700;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  box-shadow:
+    0 10px 25px rgba(244,123,32,0.25);
+}
+
+.process-step h3{
+
+  margin-bottom:15px;
+
+  color:#0B1F33;
+}
+
+.process-step p{
+
+  color:#4b5563;
+
+  font-size:0.95rem;
+}
 
 
 
