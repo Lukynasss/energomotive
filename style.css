@@ -731,6 +731,12 @@ footer{
     display:block;
   }
 
+    .mobile-actions{
+
+    display:flex;
+    align-items:center;
+  }
+
   .nav-links{
 
     position:fixed;
@@ -1312,5 +1318,23 @@ a,
 
 }
 
+  .mobile-actions{
 
+    display:block
+  }
+.mobile-phone{
+
+  color:white;
+  text-decoration:none;
+
+  font-size:1.4rem;
+
+  margin-right:20px;
+
+  transition:0.3s;
+}
+
+.mobile-phone:hover{
+  color:#F47B20;
+}
 
