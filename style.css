@@ -54,6 +54,10 @@ body{
   transition:0.4s;
 }
 
+.mobile-actions{
+  display:none !important;
+}
+
 .logo{
 
   font-size:1.5rem;
@@ -1098,6 +1102,39 @@ a,
   gap:20px;
 }
 
+.mobile-actions{
+  display:none; 
+   align-items:center;
+  gap:20px;
+}
+  
+  
+.mobile-phone{
+  width:56px;
+  height:56px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:#F47B20;
+  color:white;
+
+  font-size:1.5rem;
+  text-decoration:none;
+
+  box-shadow:
+    0 10px 25px rgba(244,123,32,0.35);
+}
+
+.nav-right{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
 .nav-contact a{
   color:white;
   text-decoration:none;
@@ -1321,9 +1358,7 @@ a,
 
 }
 
-  .mobile-actions{
-  display:none;
-}
+
 
 .mobile-phone{
 
@@ -1357,3 +1392,20 @@ a,
   transform:scale(1.08);
 }
 
+@media(max-width:768px){
+
+  .nav-contact{
+    display:none;
+  }
+
+  .mobile-actions{
+    display:flex !important;
+    align-items:center;
+    gap:15px;
+  }
+
+  .hamburger{
+    display:block !important;
+  }
+
+}
