@@ -1106,7 +1106,7 @@ a,
   color:#F47B20;
 }
 
-@media(max-width:1200px){
+@media(max-width:768px){
 
   .nav-contact{
     display:none;
@@ -1240,6 +1240,76 @@ a,
   color:#4b5563;
 
   font-size:0.95rem;
+}
+
+/* ========================================= */
+/* MOBILE CONTACT + PROCESS */
+/* ========================================= */
+
+.mobile-contact{
+  display:none;
+}
+
+@media(max-width:768px){
+
+  /* kontakt v mobilním menu */
+
+  .mobile-contact{
+
+    display:flex;
+    flex-direction:column;
+
+    gap:15px;
+
+    margin-top:35px;
+    padding-top:25px;
+
+    border-top:1px solid rgba(255,255,255,0.15);
+  }
+
+  .mobile-contact a{
+
+    color:white;
+    text-decoration:none;
+
+    font-size:0.95rem;
+    font-weight:500;
+  }
+
+  .mobile-contact i{
+
+    color:#F47B20;
+    margin-right:8px;
+  }
+
+  /* postup zakázky pod sebe */
+
+  .process-line{
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:50px;
+  }
+
+  .process-line::before{
+
+    left:50%;
+    top:0;
+
+    width:3px;
+    height:100%;
+
+    transform:translateX(-50%);
+  }
+
+  .process-step{
+
+    max-width:350px;
+    width:100%;
+  }
+
 }
 
 
